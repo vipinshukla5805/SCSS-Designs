@@ -1,0 +1,237 @@
+.pn-chart-header {
+    background-color: transparent;
+    padding: 0;
+
+    .nav-tabs {
+        border-bottom: 0;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        border: none;
+        border-bottom: 4px solid transparent;
+        min-width: 122px;
+        padding: 3px 10px 4px;
+        text-align: center;
+
+        &,
+        &:focus,
+        &:hover {
+            color: #39688A;
+        }
+
+        &.active {
+            &,
+            &:focus,
+            &:hover {
+                border-color: #39688A;
+            }
+        }
+    }
+}
+
+.pn-chart-description {
+    margin: 0;
+    padding-left: 25px;
+
+    .list-inline-item {
+        line-height: 34px;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+
+    .dropdown-toggle {
+        background-color: transparent;
+        min-width: 212px;
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+}
+
+.pn-chart-description .dropdown-toggle,
+.pn-chart-mark {
+    &:before {
+        background-color: #000;
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        height: 14px;
+        margin-bottom: 2px;
+        margin-right: 8px;
+        vertical-align: middle;
+        width: 14px;
+    }
+
+    &.green:before {
+        background-color: #8CC63F;
+    }
+
+    &.blue:before {
+        background-color: #0071BC;
+    }
+
+    &.pink:before {
+        background-color: #ED1E79;
+    }
+}
+
+.pn-chart-description .dropdown-toggle:before {
+    background-color: transparent;
+    border: 2px dotted #F7931E;
+}
+
+.ct-golden-section:before {
+    padding-bottom: 34%;
+    min-height: 240px;
+}
+
+.ct-grid {
+    // &.ct-horizontal {
+    //     display: none;
+    // }
+    &.ct-vertical {
+        stroke-dasharray: 0;
+    }
+}
+
+.ct-line {
+    stroke-width: 3px;
+}
+
+.ct-point {
+    stroke-width: 3px;
+}
+// .ct-labels {
+//     > *  {
+//         width: 50px;
+//         > span {
+//             width: 50px;
+//         }
+//     }
+// }
+
+.ct-tooltip-2 {
+    background-color: #4ACCC2;
+
+    &:before {
+        display: none;
+    }
+
+    &.tooltip-show {
+        opacity: 0.7;
+    }
+
+    br {
+        display: none;
+    }
+
+    .chartist-tooltip-title {
+        color: #3A688B;
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .chartist-tooltip-date {
+        color: #333333;
+        display: block;
+        font-size: 14px;
+    }
+}
+
+.ct-series-dashed {
+    .ct-bar,
+    .ct-line,
+    .ct-slice-donut {
+        stroke: #F7931E;
+        stroke-style: dashed;
+        stroke-dasharray: 2;
+    }
+
+    .ct-point {
+        display: none;
+    }
+
+    .ct-area,
+    .ct-slice-pie {
+        fill: #F7931E;
+    }
+}
+
+.ct-series-green {
+    .ct-bar,
+    .ct-line,
+    .ct-slice-donut {
+        stroke: #8cc63f;
+    }
+
+    .ct-point {
+        fill: #fff;
+        stroke: #8cc63f;
+    }
+
+    .ct-area,
+    .ct-slice-pie {
+        fill: #8cc63f;
+    }
+}
+
+.ct-series-blue {
+    .ct-bar,
+    .ct-line,
+    .ct-slice-donut {
+        stroke: #0071bc;
+    }
+
+    .ct-point {
+        fill: #fff;
+        stroke: #0071bc;
+    }
+
+    .ct-area,
+    .ct-slice-pie {
+        fill: #0071bc;
+    }
+}
+
+.ct-series-deepblue {
+    .ct-bar,
+    .ct-line,
+    .ct-slice-donut {
+        stroke: #39688a;
+    }
+
+    .ct-point {
+        fill: #fff;
+        stroke: #39688a;
+    }
+
+    .ct-area,
+    .ct-slice-pie {
+        fill: #39688a;
+    }
+}
+
+.ct-series-pink {
+    .ct-bar,
+    .ct-line,
+    .ct-slice-donut {
+        stroke: #ed1e79;
+    }
+
+    .ct-point {
+        fill: #fff;
+        stroke: #ed1e79;
+    }
+
+    .ct-area,
+    .ct-slice-pie {
+        fill: #ed1e79;
+    }
+}

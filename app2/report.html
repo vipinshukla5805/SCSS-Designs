@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/chartist.min.css">
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="css/template.css">
+
+    <!--[if gte IE 9]>
+    <script src="js/matchMedia.js"></script>
+    <![endif]-->
+
+    <!-- Async Fonts Loading -->
+    <script src="js/webfontloader.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Source Sans Pro:300,400,600,700']
+            },
+            custom: {
+                families: ['FontAwesome'],
+                urls: ['css/font-awesome.min.css']
+            },
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="pn-header">
+        <div class="container">
+            <h1 class="pn-header-logo">
+                <a href="#">
+                    <img src="img/logo.svg" />
+                </a>
+            </h1>
+            <button class="pn-header-toggle pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"><i class="fa fa-bars"></i></button>
+            <div class="pn-header-user dropdown">
+                <a class="dropdown-toggle clearfix" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="email">ofir.oron@gmail.com</span>
+                    <img class="img-circle" src="img/user.jpg" />
+                    <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="collapse" id="collapseMenu">
+                <ul class="nav nav-tabs pn-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="camplaign-manager.html">Campaigns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="pn-section-toolbar">
+            <div class="container">
+                <div class="dropdown pull-md-left">
+                    <button class="btn pn-btn-campaigns dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All campaigns</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-header pn-btn-campaigns-select" href="#">Unselect all</a>
+                        <label class="pn-checkbox dropdown-item">
+                            <input type="checkbox" name="optionsCheckbox" checked />
+                            <span class="pn-checkbox-icon"></span>
+                            Monday Weekly
+                        </label>
+                        <label class="pn-checkbox dropdown-item">
+                            <input type="checkbox" name="optionsCheckbox" checked />
+                            <span class="pn-checkbox-icon"></span>
+                            Monday Weekly
+                        </label>
+                        <label class="pn-checkbox dropdown-item">
+                            <input type="checkbox" name="optionsCheckbox" checked />
+                            <span class="pn-checkbox-icon"></span>
+                            Monday Weekly
+                        </label>
+                        <label class="pn-checkbox dropdown-item">
+                            <input type="checkbox" name="optionsCheckbox" checked />
+                            <span class="pn-checkbox-icon"></span>
+                            Monday Weekly
+                        </label>
+                    </div>
+                </div>
+                <div class="pull-md-right" data-toggle="buttons">
+                    <label class="btn pn-btn-period">
+                            <input type="radio" name="period" autocomplete="off"> 24 Hr
+                          </label>
+                    <label class="btn pn-btn-period">
+                              <input type="radio" name="period" autocomplete="off"> 7 days
+                        </label>
+                    <label class="btn pn-btn-period active">
+                              <input type="radio" name="period" autocomplete="off" checked> 30 day
+                        </label>
+                    <label class="btn pn-btn-period">
+                              <input type="radio" name="period" autocomplete="off"> All
+                        </label>
+                    <label class="btn pn-btn-period">
+                              <input type="radio" name="period" autocomplete="off"> <i class="fa fa-calendar"></i> Range
+                        </label>
+                </div>
+            </div>
+        </section>
+        <section class="pn-section-report-cards">
+            <div class="container">
+                <h4 class="pn-section-title">Avg. Uplifts vs Baselign Campaigns</h4>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card card-block pn-card-report">
+                            <h4 class="card-title">Purchased <a class="small" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-info-circle"></i></a></h4>
+                            <div class="card-text">
+                                <div class="pn-card-progress pn-card-progress-dashed clearfix">
+                                    <span>3K</span>
+                                    <span>
+                                        <progress class="progress" value="50" max="100">
+                                            <span class="progress">
+                                                <span class="progress-bar" style="width: 50%;"></span>
+                                    </span>
+                                    </progress>
+                                    </span>
+                                </div>
+                                <div class="pn-card-progress pn-card-progress-teal clearfix">
+                                    <span>6K</span>
+                                    <span>
+                                        <progress class="progress" value="80" max="100">
+                                            <span class="progress">
+                                                <span class="progress-bar" style="width: 80%;"></span>
+                                    </span>
+                                    </progress>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pn-card-icon">
+                                <span>x</span>2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card card-block pn-card-report">
+                            <h4 class="card-title">Conversion <a class="small" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-info-circle"></i></a></h4>
+                            <div class="card-text">
+                                <div class="pn-card-progress pn-card-progress-dashed clearfix">
+                                    <span>25%</span>
+                                    <span>
+                                        <progress class="progress" value="50" max="100">
+                                            <span class="progress">
+                                                <span class="progress-bar" style="width: 50%;"></span>
+                                    </span>
+                                    </progress>
+                                    </span>
+                                </div>
+                                <div class="pn-card-progress pn-card-progress-teal clearfix">
+                                    <span>37%</span>
+                                    <span>
+                                        <progress class="progress" value="80" max="100">
+                                            <span class="progress">
+                                                <span class="progress-bar" style="width: 80%;"></span>
+                                    </span>
+                                    </progress>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pn-card-icon">
+                                <span>x</span>1.5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card card-block pn-card-report">
+                            <h4 class="card-title">Revenue <a class="small" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-info-circle"></i></a></h4>
+                            <div class="card-text">
+                                <div class="pn-card-progress pn-card-progress-dashed clearfix">
+                                    <span>$400</span>
+                                    <span>
+                                        <progress class="progress" value="50" max="100">
+                                            <span class="progress">
+                                                <span class="progress-bar" style="width: 50%;"></span>
+                                    </span>
+                                    </progress>
+                                    </span>
+                                </div>
+                                <div class="pn-card-progress pn-card-progress-teal clearfix">
+                                    <span>$800</span>
+                                    <span>
+                                        <progress class="progress" value="80" max="100">
+                                            <span class="progress">
+                                                <span class="progress-bar" style="width: 80%;"></span>
+                                    </span>
+                                    </progress>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pn-card-icon">
+                                <span>x</span>2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pn-section-chart">
+            <div class="container">
+                <div class="card card-block pn-card">
+                    <div class="card-header pn-chart-header">
+                        <ul class="list-inline pull-lg-right pn-chart-description">
+                            <li class="list-inline-item pn-chart-mark green">Opened</li>
+                            <li class="list-inline-item pn-chart-mark blue">Clicked</li>
+                            <li class="list-inline-item pn-chart-mark pink">Purchased</li>
+                            <li class="list-inline-item">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonChart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Baselign Campaigns</button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButtonChart">
+                                        <a class="dropdown-item" href="#">Baseline (Opened)</a>
+                                        <a class="dropdown-item" href="#">Baseline (Clicked)</a>
+                                        <a class="dropdown-item" href="#">Baseline (Purchased)</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Edit Baselign Campaigns</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-tabs pull-lg-left">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#chart1" data-toggle="tab">Campaign</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#chart2" data-toggle="tab">Revenue</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="chart1" role="tabpanel">
+                            <div class="ct-chart-1 ct-chart ct-golden-section"></div>
+                        </div>
+                        <div class="tab-pane" id="chart2" role="tabpanel">
+                            <div class="ct-chart-2 ct-chart ct-golden-section"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <section class="pn-section-white">
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table pn-table-report">
+                        <thead>
+                            <tr>
+                                <th style="width: 33%;">Campaign name</th>
+                                <th>Date</th>
+                                <th>Sent</th>
+                                <th class="green">Opened</th>
+                                <th class="blue">Clicked</th>
+                                <th class="pink">Purchased</th>
+                                <th>Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pn-table-report-stat">
+                                <td></td>
+                                <td></td>
+                                <td>35K</td>
+                                <td>12K</td>
+                                <td>4.5K</td>
+                                <td>472</td>
+                                <td>$6.3K</td>
+                            </tr>
+                            <tr class="pn-table-report-baseline">
+                                <th><a href="#" class="pn-edit-campaign">Baselign Campaigns <i class="fa fa-pencil"></i></a></th>
+                                <td></td>
+                                <td>3.5K</td>
+                                <td>0.7K (15%)</td>
+                                <td>200 (12%)</td>
+                                <td>16 (4%)</td>
+                                <td>$300</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr class="archive">
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr class="archive">
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr class="archive">
+                                <th>
+                                    <label class="pn-checkbox pn-th-label hidden">
+                                        <input type="checkbox" name="optionsCheckbox" checked />
+                                        <span class="pn-checkbox-icon"></span>
+                                    </label> <span class="pn-th-label">Monday Weekly</span>
+                                </th>
+                                <td>Jan, 30, 2016</td>
+                                <td>3.5K</td>
+                                <td>1.2K (33%)</td>
+                                <td>400 (22%)</td>
+                                <td>32 (9%)</td>
+                                <td>$600</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chartist.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.min.js"></script>
+
+    <script>
+        $(function() {
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('.pn-checkbox').click(function(e) {
+                e.stopPropagation();
+            });
+
+            $('.pn-edit-campaign').click(function(e) {
+                $(this).find('.fa').toggleClass('fa-pencil').toggleClass('fa-check');
+
+                $('.pn-table-report').find('.pn-checkbox.pn-th-label').toggleClass('hidden');
+                e.preventDefault();
+            });
+
+            $('.pn-btn-campaigns-select').click(function(e) {
+                var checkBoxes = $(this).parent().find('input[type=checkbox]');
+                checkBoxes.prop('checked', !checkBoxes.prop("checked"));
+
+                if ($(this).text() == 'Unselect all') {
+
+                    $(this).text('Select all')
+                } else {
+
+                    $(this).text('Unselect all');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+            $('.pn-chart-header .nav-tabs .nav-link').on('shown.bs.tab', function(e) {
+                $(e.target.hash).find('.ct-chart')[0].__chartist__.update();
+                // $('.ct-chart-1').__chartist__.update();
+                // $('.ct-chart-2').__chartist__.update();
+            });
+        });
+
+        var chart = new Chartist.Line('.ct-chart-1', {
+            // labels: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            series: [{
+                className: 'ct-series-dashed',
+                data: [null, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            }, {
+                className: 'ct-series-pink',
+                data: [null, 15, 20, 1, 11, 1, 5, 4, 2, 14, 17, 14, 6, 20]
+            }, {
+                className: 'ct-series-blue',
+                data: [null, 20, 29, 37, 28, 25, 31, 23, 32, 36, 23, 38, 20, 27]
+            }, {
+                className: 'ct-series-green',
+                data: [null, 49, 41, 71, 48, 76, 63, 54, 85, 71, 84, 93, 57, 93]
+            }]
+        }, {
+            areaBase: 50,
+            // width: '100%',
+            // height: '332px',
+            chartPadding: {
+                top: 15,
+                right: 15,
+                bottom: 15,
+                left: 15
+            },
+            fullWidth: true,
+            stackMode: 'overlap',
+            axisX: {
+                high: 13,
+                low: 1,
+                offset: 0,
+                showLabel: false,
+                showGrid: false
+            },
+            axisY: {
+                high: 120,
+                labelInterpolationFnc: function(value) {
+                    return value + '%';
+                },
+                low: 0,
+                ticks: [0, 20, 40, 60, 80, 100],
+                type: Chartist.FixedScaleAxis,
+            },
+        });
+
+        chart.on('draw', function(data) {
+            if (data.type === 'point') {
+                var triangle = new Chartist.Svg('circle', {
+                    cx: data.x,
+                    cy: data.y,
+                    r: 5,
+                }, 'ct-point');
+
+                data.element.replace(triangle);
+            }
+        });
+
+        var chart2 = new Chartist.Line('.ct-chart-2', {
+            // labels: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            series: [{
+                className: 'ct-series-dashed',
+                data: [null, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+            }, {
+                className: 'ct-series-deepblue',
+                data: [null, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 1, 2016, 1:00 AM (sat)</span>',
+                    value: 340
+                }, 0, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 12, 2016, 11:00 AM (sat)</span>',
+                    value: 240
+                }, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 25, 2016, 5:00 PM (sat)</span>',
+                    value: 490
+                }, 0, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 27, 2016, 10:00 AM (sat)</span>',
+                    value: 71
+                }, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 30, 2016, 10:00 AM (sat)</span>',
+                    value: 370
+                }, 0]
+            }]
+        }, {
+            areaBase: 50,
+            // width: '100%',
+            // height: '332px',
+            chartPadding: {
+                top: 15,
+                right: 15,
+                bottom: 15,
+                left: 15
+            },
+            fullWidth: true,
+            stackMode: 'overlap',
+            axisX: {
+                high: 13,
+                low: 1,
+                offset: 0,
+                showLabel: false,
+                showGrid: false
+            },
+            axisY: {
+                high: 600,
+                // labelInterpolationFnc: function(value) {
+                //     return value + '%';
+                // },
+                low: 0,
+                ticks: [0, 100, 200, 300, 400, 500],
+                type: Chartist.FixedScaleAxis,
+            },
+            plugins: [
+                Chartist.plugins.tooltip({
+                    appendToBody: true,
+                    metaIsHTML: true,
+                    tooltipOffset: {
+                        x: 0,
+                        y: 80
+                    },
+                    class: 'ct-tooltip-2',
+                })
+            ]
+        });
+
+        chart2.on('draw', function(data) {
+            if (data.type === 'point') {
+                var triangle = new Chartist.Svg('circle', {
+                    cx: data.x,
+                    cy: data.y,
+                    // 'ct:value': data.value.y,
+                    'ct:meta': data.meta,
+                    r: 5,
+                }, 'ct-point');
+                data.element.replace(triangle);
+            }
+        });
+    </script>
+</body>
+
+</html>

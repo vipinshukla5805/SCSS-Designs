@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/chartist.min.css">
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="css/template.css">
+    <!-- <link rel="stylesheet" href="fonts/redacted/stylesheet.css.css"> -->
+
+    <!--[if gte IE 9]>
+    <script src="js/matchMedia.js"></script>
+    <![endif]-->
+
+    <!-- Async Fonts Loading -->
+    <script src="js/webfontloader.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Source Sans Pro:300,400,600,700']
+            },
+            custom: {
+                families: ['FontAwesome'],
+                urls: ['css/font-awesome.min.css']
+            },
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="alert alert-danger pn-alert-danger" role="alert">
+        <div class="container"><i class="fa fa-exclamation-triangle"></i> Your Email platform is disconnected, please contact your service provider to connect platform again, <a href="#">Help me connect</a>.</div>
+    </div>
+    <header class="pn-header">
+        <div class="container">
+            <h1 class="pn-header-logo">
+                <a href="#">
+                    <img src="img/logo.svg" />
+                </a>
+            </h1>
+            <button class="pn-header-toggle pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"><i class="fa fa-bars"></i></button>
+            <div class="pn-header-user dropdown">
+                <a class="dropdown-toggle clearfix" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="email">ofir.oron@gmail.com</span>
+                    <img class="img-circle" src="img/user.jpg" />
+                    <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="collapse" id="collapseMenu">
+                <ul class="nav nav-tabs pn-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Campaigns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="pn-section-toolbar pn-section-toolbar-campaigns">
+            <div class="container">
+                <div class="pull-left">
+                    <div class="btn-group" role="group">
+                        <a href="#" class="btn pn-btn-toggle-teal active"><i class="fa fa-list"></i></a>
+                        <a href="#" class="btn pn-btn-toggle-teal"><i class="fa fa-calendar"></i></a>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button type="button" class="btn pn-btn-new-teal">Create new</button>
+                </div>
+            </div>
+        </section>
+        <section class="pn-section-campaigns">
+            <div class="container">
+                <h2 class="pn-section-campaigns-title">Planned Campaigns</h2>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="New Products" data-trigger="hover">New Products</h3>
+                                <div class="pn-campaig-info">
+                                    <a href="#"><i class="fa fa-repeat"></i></a> Every Fri 09:00 am
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn">Edit</button>
+                                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/campaign_preview.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status pn-campaign-status-danger">
+                                    <i class="fa fa-exclamation-triangle"></i> Platform Disconnected
+                                </div>
+                                <div class="pn-campaign-status-info">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h2 class="pn-section-campaigns-title">Sent Campaigns</h2>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="Best products of the month" data-trigger="hover">Best products of the month</h3>
+                                <div class="pn-campaig-info">
+                                    <a href="#"><i class="fa fa-repeat"></i></a> Every Fri 09:00 am
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/brain.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main pn-col-campaign-main-st">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <dl>
+                                        <dt>Sent</dt>
+                                        <dd>15,253</dd>
+                                        <dt>Opened</dt>
+                                        <dd>3.5%</dd>
+                                        <dt>Clicked</dt>
+                                        <dd>1.7%</dd>
+                                        <dt>Purchased</dt>
+                                        <dd>0.3%</dd>
+                                    </dl>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pn-campaing-stat-bl">
+                                        <div class="colored">$12,897</div>
+                                        <div class="sub">Revenue</div>
+                                    </div>
+                                    <div class="pn-campaing-stat-bl">
+                                        <div class="colored">x1.5</div>
+                                        <div class="sub">Uplift</div>
+                                    </div>
+                                    <div class="pn-col-campaign-boost">
+                                        <i class="fa fa-arrow-up"></i> 20%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chartist.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.min.js"></script>
+
+    <script>
+        $(function() {
+
+                    $('[data-toggle="tooltip"]').tooltip();
+
+                    $('[data-toggle="pn-popover-tt"]').popover({
+                        template: '<div class="popover pn-popover-tt" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+                    })
+    </script>
+</body>
+
+</html>

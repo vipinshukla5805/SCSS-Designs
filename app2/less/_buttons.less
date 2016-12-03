@@ -1,0 +1,86 @@
+.pn-btn-campaigns {
+    background-color: #fff;
+    border-color: #CBCBCA;
+    color: #808080;
+    min-width: 238px;
+    padding: 8px 12px;
+    text-align: left;
+
+    &:after {
+        border-width: 5px 5px 0 5px;
+        float: right;
+        margin-top: 8px;
+    }
+
+    + .dropdown-menu {
+        min-width: 100%;
+    }
+}
+
+.pn-btn-period {
+    background-color: transparent;
+    border-color: #E6E6E6;
+    color: #808080;
+    margin-bottom: 0;
+    padding: 8px 12px;
+
+    &.active {
+        background-color: #DBDBDB;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 4px;
+    }
+    @media (min-width: 768px) {
+        min-width: 83px;
+    }
+}
+
+.pn-btn-toggle-teal {
+    background-color: transparent;
+    border-color: #4accc2;
+    color: #4accc2;
+    min-height: 26px;
+    padding: 2px 25px;
+
+    &:focus,
+    &:hover {
+        background-color: #EDF5F9;
+        color: #4accc2;
+    }
+
+    &.active {
+        background-color: #4accc2;
+
+        &,
+        &:focus,
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.pn-btn-new-teal {
+    background-color: #4accc2;
+    color: #fff;
+    min-width: 136px;
+    padding: 2px 25px;
+
+    &:focus,
+    &:hover {
+        background-color: #3AA59B;
+        color: #fff;
+    }
+}
+
+.pn-btn-new-campaign {
+    background-color: #4accc2;
+    border-radius: 0;
+    color: #fff;
+    font-size: 27px;
+    padding: 7px 25px;
+
+    &:focus,
+    &:hover {
+        color: #fff;
+    }
+}

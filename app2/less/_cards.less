@@ -1,0 +1,411 @@
+.pn-card-report {
+    border-color: #CBCBCA;
+    margin-bottom: 23px;
+    padding: 12px 25px 6px;
+
+    .card-title {
+        font-size: 16px;
+        margin-bottom: 0;
+
+        a {
+            color: #666666;
+        }
+    }
+
+    .card-text {
+        padding-top: 14px;
+    }
+
+    .card-text,
+    .pn-card-icon {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .pn-card-icon {
+        color: #3A688B;
+        font-size: 50px;
+        line-height: 1;
+        min-width: 60px;
+        padding-left: 10px;
+        text-align: right;
+        width: 1%;
+
+        span {
+            font-size: 42px;
+        }
+    }
+}
+
+.pn-card-progress {
+    width: 100%;
+
+    > span {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+
+        &:first-child {
+            padding-right: 8px;
+            width: 1%;
+        }
+    }
+
+    progress {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .progress[value] {
+        background-color: transparent;
+        border-radius: 0;
+        height: 5px;
+    }
+
+    .progress[value]::-ms-fill {
+        border-radius: 3px;
+    }
+
+    .progress[value]::-moz-progress-bar {
+        border-radius: 3px;
+    }
+
+    .progress[value]::-webkit-progress-bar {
+        background-color: transparent;
+        border-radius: 3px;
+    }
+
+    .progress[value]::-webkit-progress-value {
+        border-radius: 3px;
+    }
+    // IE9 hacks to accompany custom markup. We don't need to scope this via media queries, but I feel better doing it anyway.
+    @media screen and (min-width: ~"0\0") {
+        .progress {
+            background-color: transparent;
+            height: 5px;
+            margin-bottom: 0;
+
+            .progress {
+                margin-top: -12px;
+            }
+        }
+
+        .progress-bar {
+            height: 5px;
+        }
+    }
+}
+
+.pn-card-progress-dashed {
+    color: #B3B3B3;
+
+    .progress {
+        &[value]::-webkit-progress-value {
+            background-color: transparent;
+            border: 2px dotted #F7931E;
+        }
+
+        &[value]::-moz-progress-bar {
+            background-color: transparent;
+            border: 2px dotted #F7931E;
+        }
+        // IE10+, Microsoft Edge
+        &[value]::-ms-fill {
+            background-color: transparent;
+            border: 2px dotted #F7931E;
+        }
+        // IE9
+        @media screen and (min-width: ~"0\0") {
+            .progress-bar {
+                background-color: transparent;
+                border: 2px dotted #F7931E;
+            }
+        }
+    }
+}
+
+.pn-card-progress-teal {
+    color: #808080;
+
+    .progress[value]::-webkit-progress-value {
+        background-color: #4ACCC2;
+    }
+
+    .progress[value]::-moz-progress-bar {
+        background-color: #4ACCC2;
+    }
+    // IE10+, Microsoft Edge
+    .progress[value]::-ms-fill {
+        background-color: #4ACCC2;
+    }
+    // IE9
+    @media screen and (min-width: ~"0\0") {
+        .progress-bar {
+            background-color: #4ACCC2;
+        }
+    }
+}
+
+.pn-card-campaign {
+    border-color: #cccccc;
+    margin-bottom: 0;
+    padding: 15px 27px;
+
+    + .pn-card-campaign {
+        margin-top: 12px;
+    }
+
+    .pn-col-campaign-brief {
+        @media (min-width: 544px) {
+            width: calc(~"100% - 170px");
+        }
+        @media (min-width: 992px) {
+            width: 33.3333%;
+        }
+    }
+
+    .pn-col-campaign-main {
+        border-top: 1px solid #E5E5E5;
+        margin-top: 15px;
+        padding-top: 15px;
+        @media (min-width: 992px) {
+            border-left: 1px solid #E5E5E5;
+            border-top: 0;
+            left: -170px;
+            margin-top: 0;
+            min-height: 150px;
+            padding-top: 0;
+            width: calc(~"66.6667% - 170px");
+        }
+    }
+
+    .pn-col-campaign-main-st {
+        .col-sm-6 {
+            + .col-sm-6 {
+                border-top: 1px solid #E5E5E5;
+                margin-top: 15px;
+                position: relative;
+                @media (min-width: 544px) {
+                    border-top: none;
+                }
+            }
+            @media (min-width: 992px) {
+                margin-top: 0 !important;
+                min-height: 150px;
+            }
+
+            + .col-sm-6 {
+                @media (min-width: 544px) {
+                    border-left: 1px solid #E5E5E5;
+                }
+            }
+        }
+
+        dl {
+            margin-bottom: 0;
+            padding: 15px;
+
+            dt {
+                color: #808080;
+                float: left;
+                font-weight: 500;
+                line-height: 19px;
+                margin-top: 14px;
+                width: 100px;
+
+                &:first-child {
+                    margin-top: 0;
+
+                    + dd {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            dd {
+                color: #4d4d4d;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 19px;
+                margin-bottom: 0;
+                margin-top: 14px;
+                margin-left: 100px;
+                text-align: right;
+            }
+        }
+    }
+
+    .pn-campaing-stat-bl {
+        padding-top: 12px;
+
+        .colored {
+            color: #39688a;
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        .sub {
+            color: #808080;
+        }
+    }
+
+    .pn-col-campaign-boost {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        color: #7ac943;
+        font-size: 18px;
+        padding: 0 4px;
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+    .pn-col-campaign-image {
+        display: none;
+        width: 170px;
+        @media (min-width: 544px) {
+            display: block;
+        }
+        @media (min-width: 992px) {
+            left: calc(~"66.6667% - 170px");
+        }
+    }
+
+    .pn-campaign-logo {
+        float: left;
+        margin-top: 13px;
+
+        img {
+            height: 24px;
+            width: 24px;
+            @media (min-width: 992px) {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+
+    .pn-campaign-description {
+        margin-left: 30px;
+        padding-top: 15px;
+        @media (min-width: 992px) {
+            margin-left: 72px;
+        }
+    }
+
+    .pn-campaign-title {
+        color: #39688a;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .pn-campaig-info {
+        min-height: 65px;
+
+        &,
+        & a {
+            color: #808080;
+        }
+    }
+
+    .pn-campaig-action {
+        .btn {
+            color: #81C2BB;
+            background-color: #fff;
+            border-color: #81C2BB;
+            font-size: 14px;
+            min-width: 107px;
+            padding: 4px 10px;
+            text-align: left;
+
+            &:focus,
+            &:hover {
+                background-color: #81C2BB !important;
+                border-color: #81C2BB;
+                color: #fff;
+            }
+
+            &.dropdown-toggle {
+                min-width: 0;
+            }
+        }
+
+        .dropdown-menu {
+            border-color: #81C2BB;
+            min-width: 136px;
+        }
+
+        .dropdown-item {
+            color: #81C2BB;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:focus,
+            &:hover {
+                background-color: #EDF5F9;
+            }
+        }
+    }
+
+    .pn-campaign-main {
+        padding-left: 30px;
+        padding-top: 10px;
+        @media (min-width: 992px) {
+            padding-left: 47px;
+        }
+    }
+
+    .pn-campaign-status {
+        color: #39688a;
+        font-size: 24px;
+        font-weight: 300;
+
+        &.pn-campaign-status-blue {
+            color: #72A3D8;
+        }
+
+        &.pn-campaign-status-danger {
+            color: #ff1d25;
+        }
+
+        i {
+            margin-left: -26px;
+        }
+
+        + .pn-campaign-status-info {
+            margin-top: 17px;
+        }
+    }
+
+    .pn-campaign-status-info {
+        color: #7f7f7f;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .pn-campaign-img {
+        border-color: #cccccc;
+        background-color: #f3f3f3;
+        float: right;
+        height: 150px;
+        padding: 0;
+        position: relative;
+        width: 140px;
+
+        img {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            max-width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}

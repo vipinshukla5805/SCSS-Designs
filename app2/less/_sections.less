@@ -1,0 +1,106 @@
+.pn-section-toolbar {
+    margin-bottom: 22px;
+
+    .dropdown-menu {
+        .dropdown-header {
+            color: #4ACCC2;
+        }
+
+        .dropdown-item {
+            color: #3A688B;
+        }
+    }
+
+    .pull-md-right {
+        font-size: 0;
+
+        .btn + .btn {
+            margin-left: 4px;
+        }
+    }
+    @media (max-width: 992px) {
+        .pull-md-left {
+            margin-bottom: 22px;
+        }
+    }
+
+    &.pn-section-toolbar-campaigns {
+        padding: 4px 0;
+    }
+}
+
+.pn-section-report-cards {
+    .pn-section-title {
+        color: #808080;
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .row {
+        margin-left: -7px;
+        margin-right: -7px;
+
+        > div {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+    }
+}
+
+.pn-section-chart {
+    margin-bottom: 19px;
+}
+
+.pn-section-white {
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+}
+
+.pn-section-campaigns-title {
+    color: #7f7f7f;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 16px;
+
+    .pn-card-campaign + & {
+        margin-top: 25px;
+    }
+}
+
+.pn-message-no-campaings {
+    color: #3a688b;
+    margin-bottom: 63px;
+
+    span {
+        color: #4ACCC2;
+    }
+}
+
+.pn-section-welcome {
+    margin-top: 37px;
+
+    h1 {
+        color: #4d4d4d;
+        font-size: 36px;
+        margin-bottom: 19px;
+    }
+
+    p {
+        color: #39688a;
+        font-size: 21px;
+        line-height: 1.3;
+        margin-bottom: 35px;
+    }
+
+    .pn-section-welcome-inner {
+        background-color: #fff;
+        min-height: calc(~"100vh - 120px");
+        padding: 34px 15px;
+    }
+    @media (min-width: 768px) {
+        .pn-section-welcome-inner {
+            min-height: calc(~"100vh - 158px");
+        }
+    }
+}

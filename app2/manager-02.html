@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/chartist.min.css">
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="css/template.css">
+    <!-- <link rel="stylesheet" href="fonts/redacted/stylesheet.css.css"> -->
+
+    <!--[if gte IE 9]>
+    <script src="js/matchMedia.js"></script>
+    <![endif]-->
+
+    <!-- Async Fonts Loading -->
+    <script src="js/webfontloader.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Source Sans Pro:300,400,600,700']
+            },
+            custom: {
+                families: ['FontAwesome'],
+                urls: ['css/font-awesome.min.css']
+            },
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="pn-header">
+        <div class="container">
+            <h1 class="pn-header-logo">
+                <a href="#">
+                    <img src="img/logo.svg" />
+                </a>
+            </h1>
+            <button class="pn-header-toggle pull-right hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"><i class="fa fa-bars"></i></button>
+            <div class="pn-header-user dropdown">
+                <a class="dropdown-toggle clearfix" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="email">ofir.oron@gmail.com</span>
+                    <img class="img-circle" src="img/user.jpg" />
+                    <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="collapse" id="collapseMenu">
+                <ul class="nav nav-tabs pn-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Campaigns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="pn-section-toolbar pn-section-toolbar-campaigns">
+            <div class="container">
+                <div class="pull-left">
+                    <div class="btn-group" role="group">
+                        <a href="#" class="btn pn-btn-toggle-teal active"><i class="fa fa-list"></i></a>
+                        <a href="#" class="btn pn-btn-toggle-teal"><i class="fa fa-calendar"></i></a>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button type="button" class="btn pn-btn-new-teal">Create new</button>
+                </div>
+            </div>
+        </section>
+        <section class="pn-section-campaigns">
+            <div class="container">
+                <h2 class="pn-section-campaigns-title">Planned Campaigns</h2>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="New Products" data-trigger="hover">New Products</h3>
+                                <div class="pn-campaig-info">
+                                    <a href="#"><i class="fa fa-repeat"></i></a> Every Fri 09:00 am
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn">Edit</button>
+                                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/campaign_preview.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status">
+                                    <i class="fa fa-clock-o"></i> Launching this friday
+                                </div>
+                                <div class="pn-campaign-status-info">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="Best products of the month" data-trigger="hover">Best products of the month</h3>
+                                <div class="pn-campaig-info">
+                                    <a href="#"><i class="fa fa-repeat"></i></a> Every Fri 09:00 am
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/brain.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status">
+                                    <i class="fa fa-edit"></i> Campain not ready
+                                </div>
+                                <div class="pn-campaign-status-info">
+                                    Please complete the design of the email before launching the campaign
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="Only Today 50% oﬀ" data-trigger="hover">Only Today 50% oﬀ</h3>
+                                <div class="pn-campaig-info">
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/campaign_preview.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status">
+                                    <i class="fa fa-edit"></i> Campain not ready
+                                </div>
+                                <div class="pn-campaign-status-info">
+                                    Please Schedule the campaign first before launching it.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="Welcome to my shop" data-trigger="hover">Welcome to my shop</h3>
+                                <div class="pn-campaig-info">
+                                    <a href="#"><i class="fa fa-repeat"></i></a> Every Mon, Tue, Wed, Thu, Fri, Sat, Sun 09:00 am
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/campaign_preview.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status pn-campaign-status-blue">
+                                    <i class="fa fa-thumbs-up"></i> Campaign ready to be sent
+                                </div>
+                                <div class="pn-campaign-status-info">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="Todays Sale" data-trigger="hover">Todays Sale</h3>
+                                <div class="pn-campaig-info">
+
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/campaign_preview.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status">
+                                    <i class="fa fa-edit"></i> Campain not ready
+                                </div>
+                                <div class="pn-campaign-status-info">
+                                    Please complete the design of the email before launching the campaign
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card pn-card-campaign">
+                    <div class="row">
+                        <div class="col-xs-12 pn-col-campaign-brief">
+                            <div class="pn-campaign-logo">
+                                <img src="img/logo_mailchimp.jpg" class="img-circle" />
+                            </div>
+                            <div class="pn-campaign-description">
+                                <h3 class="pn-campaign-title" data-toggle="pn-popover-tt" data-placement="top" data-content="Welcome" data-trigger="hover">Welcome</h3>
+                                <div class="pn-campaig-info">
+                                    <a href="#"><i class="fa fa-repeat"></i></a> Every Mon, Tue, Wed, Thu, Fri, Sat, Sun 09:00 am
+                                </div>
+                                <div class="pn-campaig-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Duplicate</a>
+                                            <a class="dropdown-item" href="#">Pause</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-image">
+                            <div class="img-thumbnail pn-campaign-img">
+                                <img alt="200x200" src="img/campaign_preview.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pn-col-campaign-main">
+                            <div class="pn-campaign-main">
+                                <div class="pn-campaign-status pn-campaign-status-blue">
+                                    <i class="fa fa-pause"></i> Campaign is paused
+                                </div>
+                                <div class="pn-campaign-status-info">
+                                    Please complete the design of the email before launching the campaign
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chartist.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.min.js"></script>
+
+    <script>
+        $(function() {
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+             $('[data-toggle="pn-popover-tt"]').popover({
+                 template: '<div class="popover pn-popover-tt" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+             })
+
+            $('.pn-checkbox').click(function(e) {
+                e.stopPropagation();
+            });
+
+            $('.pn-edit-campaign').click(function(e) {
+                $(this).find('.fa').toggleClass('fa-pencil').toggleClass('fa-check');
+
+                $('.pn-table-report').find('.pn-checkbox.pn-th-label').toggleClass('hidden');
+                e.preventDefault();
+            });
+
+            $('.pn-btn-campaigns-select').click(function(e) {
+                var checkBoxes = $(this).parent().find('input[type=checkbox]');
+                checkBoxes.prop('checked', !checkBoxes.prop("checked"));
+
+                if ($(this).text() == 'Unselect all') {
+
+                    $(this).text('Select all')
+                } else {
+
+                    $(this).text('Unselect all');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+            $('.pn-chart-header .nav-tabs .nav-link').on('shown.bs.tab', function(e) {
+                $(e.target.hash).find('.ct-chart')[0].__chartist__.update();
+                // $('.ct-chart-1').__chartist__.update();
+                // $('.ct-chart-2').__chartist__.update();
+            });
+        });
+
+        var chart = new Chartist.Line('.ct-chart-1', {
+            // labels: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            series: [{
+                className: 'ct-series-dashed',
+                data: [null, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            }, {
+                className: 'ct-series-pink',
+                data: [null, 15, 20, 1, 11, 1, 5, 4, 2, 14, 17, 14, 6, 20]
+            }, {
+                className: 'ct-series-blue',
+                data: [null, 20, 29, 37, 28, 25, 31, 23, 32, 36, 23, 38, 20, 27]
+            }, {
+                className: 'ct-series-green',
+                data: [null, 49, 41, 71, 48, 76, 63, 54, 85, 71, 84, 93, 57, 93]
+            }]
+        }, {
+            areaBase: 50,
+            // width: '100%',
+            // height: '332px',
+            chartPadding: {
+                top: 15,
+                right: 15,
+                bottom: 15,
+                left: 15
+            },
+            fullWidth: true,
+            stackMode: 'overlap',
+            axisX: {
+                high: 13,
+                low: 1,
+                offset: 0,
+                showLabel: false,
+                showGrid: false
+            },
+            axisY: {
+                high: 120,
+                labelInterpolationFnc: function(value) {
+                    return value + '%';
+                },
+                low: 0,
+                ticks: [0, 20, 40, 60, 80, 100],
+                type: Chartist.FixedScaleAxis,
+            },
+        });
+
+        chart.on('draw', function(data) {
+            if (data.type === 'point') {
+                var triangle = new Chartist.Svg('circle', {
+                    cx: data.x,
+                    cy: data.y,
+                    r: 5,
+                }, 'ct-point');
+
+                data.element.replace(triangle);
+            }
+        });
+
+        var chart2 = new Chartist.Line('.ct-chart-2', {
+            // labels: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            series: [{
+                className: 'ct-series-dashed',
+                data: [null, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+            }, {
+                className: 'ct-series-deepblue',
+                data: [null, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 1, 2016, 1:00 AM (sat)</span>',
+                    value: 340
+                }, 0, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 12, 2016, 11:00 AM (sat)</span>',
+                    value: 240
+                }, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 25, 2016, 5:00 PM (sat)</span>',
+                    value: 490
+                }, 0, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 27, 2016, 10:00 AM (sat)</span>',
+                    value: 71
+                }, 0, {
+                    meta: '<span class="chartist-tooltip-title">News sale</span><span class="chartist-tooltip-date">Jan, 30, 2016, 10:00 AM (sat)</span>',
+                    value: 370
+                }, 0]
+            }]
+        }, {
+            areaBase: 50,
+            // width: '100%',
+            // height: '332px',
+            chartPadding: {
+                top: 15,
+                right: 15,
+                bottom: 15,
+                left: 15
+            },
+            fullWidth: true,
+            stackMode: 'overlap',
+            axisX: {
+                high: 13,
+                low: 1,
+                offset: 0,
+                showLabel: false,
+                showGrid: false
+            },
+            axisY: {
+                high: 600,
+                // labelInterpolationFnc: function(value) {
+                //     return value + '%';
+                // },
+                low: 0,
+                ticks: [0, 100, 200, 300, 400, 500],
+                type: Chartist.FixedScaleAxis,
+            },
+            plugins: [
+                Chartist.plugins.tooltip({
+                    appendToBody: true,
+                    metaIsHTML: true,
+                    tooltipOffset: {
+                        x: 0,
+                        y: 80
+                    },
+                    class: 'ct-tooltip-2',
+                })
+            ]
+        });
+
+        chart2.on('draw', function(data) {
+            if (data.type === 'point') {
+                var triangle = new Chartist.Svg('circle', {
+                    cx: data.x,
+                    cy: data.y,
+                    // 'ct:value': data.value.y,
+                    'ct:meta': data.meta,
+                    r: 5,
+                }, 'ct-point');
+                data.element.replace(triangle);
+            }
+        });
+    </script>
+</body>
+
+</html>
