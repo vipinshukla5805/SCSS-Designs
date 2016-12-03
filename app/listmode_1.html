@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/tether.min.css" rel="stylesheet">
+    <link href="css/chartist.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700" rel="stylesheet"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/matchMedia.js"></script>
+        <script src="js/classList.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+        <script src="js/es6-shim.min.js"></script>
+    <![endif]-->
+    <!-- Async Fonts Loading -->
+    <script src="js/webfontloader.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Work Sans:400,500,600,700', 'Lato:100,100i,300,300i,400,400i,700,700i,900,900i']
+            },
+            custom: {
+                families: ['FontAwesome', 'Material Design Icons'],
+                urls: ['css/font-awesome.min.css', '//cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css']
+            },
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-dark wb-navbar">
+                <div class="container">
+                    <button class="navbar-toggler collapsed hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar"
+                        aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a href="#" class="navbar-brand"><img src="images/logo.png"></a>
+                    <div class="collapse navbar-collapse navbar-toggleable-md text-lg-center" id="collapsingNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quizzes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Lists</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Explore <span class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                        <div class="navbar-user pull-lg-right">
+                            <div class="navbar-user-right">
+                                <a class="navbar-user-leave" href="#"><span></span></a>
+                                <a class="navbar-user-counter" href="#"><span>46</span></a>
+                            </div>
+                            <a class="navbar-user-menu" href="#"><img class="navbar-user-avatar img-circle" src="images/avatar.jpg"><span>dariaieremeieva</span>                                <span class="navbar-user-caret hidden-xs"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-xs-12 push-xl-2">
+                        <div class="card text-xs-center text-lg-center">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 pull-md-left">
+                                    <h4 class="list-header pull-md-left">Basic Spanish Sentence</h4>
+                                </div>
+                                <div class="col-xs-12 col-md-6 pull-md-right">
+                                    <nav class="nav nav-inline list-header pull-md-right">
+                                        <a class="nav-link active" href="#">Export</a>
+                                        <a class="nav-link" href="#">Edit</a>
+                                        <a class="nav-link" href="#">Date</a>
+                                    </nav>
+                                </div>
+                            </div>
+           <ul class="nav nav-inline list-nav-boder" role="tablist" id="listtabs">
+            <li class="nav-item">
+              <a class="nav-link active nav-text nav-text-active" data-toggle="tab" href="#pro" role="tab">In Progress</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-text" data-toggle="tab" href="#lea" role="tab">Learned</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="pro">
+              <ul class="list-group">
+                <li *ngFor="let data of progressList" class="list-group-item wb-list-firstitem">
+                  <div class="row">
+                    <div class="col-xs-10 ">
+                      <label (click)="showDefinitions(data, $event);" (mouseover)="onMouseOver(data, $event);" (mouseout)="onMouseOut()" href="javascript:void(0);"
+                        class="pull-md-left">{{data.text}}</label>
+                    </div>
+                    <div class="col-xs-1 pull-md-right">
+                      <label class="pull-md-right" (click)="speak(data.text);" class="fa fa-volume-up"></label>
+                    </div>
+                    <div class="col-xs-1 pull-md-right">
+                      <label class="pull-md-right" (click)="markAsLearnedAndUnlearned(data, true);" (mouseover)="onMouseOvernew('Mark&nbspas&nbsplearned', $event);"
+                        (mouseout)="onMouseOut()" class="fa fa-plus"></label>
+                    </div>
+                  </div>
+                </li>
+                <li  class="list-group-item" *ngIf="!requestStatus.isServerRequesting && progressList.length == 0">
+                <div class="row" >
+                  <div class="col-sm-12">
+                    <label>This list is empty.</label>
+                  </div>
+                </div>
+                </li>
+              </ul>
+            </div>
+            <!--tab-panel-->
+            <div role="tabpanel" class="tab-pane" id="lea">
+              <ul class="list-group">
+                <li *ngFor="let data of learnedList" class="list-group-item wb-list-firstitem">
+                  <div class="row">
+                    <div class="col-xs-10 ">
+                      <label (click)="showDefinitions(data, $event);" (mouseover)="onMouseOver(data, $event);" (mouseout)="onMouseOut()" href="javascript:void(0);"
+                        class="pull-md-left">{{data.text}}</label>
+                    </div>
+                    <div class="col-xs-1 pull-md-right">
+                      <label href="javascript:void(0);" class="fa fa-volume-up" (click)="speak(data.text);"></label>
+                    </div>
+                    <div class="col-xs-1 pull-md-right">
+                      <label href="javascript:void(0);" (click)="markAsLearnedAndUnlearned(data, false);" class="fa fa-reply" (mouseover)="onMouseOvernew('Mark&nbspas&nbspInprogress', $event);"
+                        (mouseout)="onMouseOut()"></label>
+                    </div>
+                  </div>
+                </li>
+                 <li  *ngIf="!requestStatus.isServerRequesting && learnedList.length == 0"  class="list-group-item">
+                <!--row-->
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label>This list is empty.</label>
+                  </div>
+                </div>
+                 </li>
+              </ul>
+            </div>
+          </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <ul class="nav nav-inline pull-md-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-tumblr"></i></a>
+                    </li>
+                </ul>
+                <ul class="nav nav-inline pull-md-left">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hideShowPassword.min.js"></script>
+    <script src="js/chartist.min.js"></script>
+    <script src="js/chartist-plugin-fill-donut.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

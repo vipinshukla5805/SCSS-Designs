@@ -1,0 +1,77 @@
+.wb-actions-course .btn-lg {
+  border-width: 2px;
+  min-width: 130px;
+  padding: 1rem 2rem; }
+
+@media (min-width: 544px) {
+  .wb-actions-course {
+    margin-top: 10px; } }
+
+@media (min-width: 544px) {
+  .wb-actions-course .btn-lg {
+    min-width: 120px; } }
+
+.wb-actions-course:hover, .wb-actions-course:focus, .wb-actions-course:active {
+  background-color: transparent; }
+
+.wb-actions-course > .quiz-btn-success {
+  background-color: #5CB85C !important;
+  color: white !important; }
+
+.wb-actions-course > .quiz-btn-danger {
+  background-color: #D9534F !important;
+  color: white !important; }
+
+.wb-actions-course > .btn-outline-quiz {
+  color: #437c90;
+  background-image: none;
+  background-color: transparent;
+  border-color: #437c90; }
+
+.wb-actions-course .btn-outline-quiz:hover,
+.wb-actions-course .btn-outline-quiz:active,
+.wb-actions-course .btn-outline-quiz:focus {
+  background-color: transparent; }
+
+#senetenceModalList {
+  z-index: 1042; }
+  #senetenceModalList .modal-body {
+    padding: 0px; }
+    #senetenceModalList .modal-body .list-group-item a {
+      text-decoration: none;
+      color: #333; }
+  #senetenceModalList .modal-sm {
+    max-width: 400px; }
+  #senetenceModalList .modal-content {
+    border-radius: 0px; }
+  #senetenceModalList .modal-dialog {
+    margin-top: 100px; }
+
+#createNewSentenceList .modal-content {
+  border-radius: 0px; }
+
+#createNewSentenceList .modal-dialog {
+  margin-top: 105px; }
+
+#createNewWordList .modal-content {
+  border-radius: 0px; }
+
+#createNewWordList .modal-dialog {
+  margin-top: 105px; }
+
+#sentenceModalWordList {
+  z-index: 1042; }
+  #sentenceModalWordList .modal-body {
+    padding: 0px; }
+    #sentenceModalWordList .modal-body .list-group-item a {
+      text-decoration: none;
+      color: #333; }
+  #sentenceModalWordList .modal-sm {
+    max-width: 400px; }
+  #sentenceModalWordList .modal-content {
+    border-radius: 0px; }
+  #sentenceModalWordList .modal-dialog {
+    margin-top: 100px; }
+
+.list-header {
+  margin: 35px 0 30px 0; }

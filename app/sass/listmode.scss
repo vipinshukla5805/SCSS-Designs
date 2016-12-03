@@ -1,0 +1,55 @@
+@import "../../bower_components/bootstrap/scss/mixins"; //
+@import "../../bower_components/bootstrap/scss/variables/_variables";
+
+.list-header{
+     padding: .75rem 1.25rem;
+}
+
+
+.wb-list-firstitem{
+   
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    
+}
+
+.list-nav-boder{
+       border-top: 1px solid #ddd;
+}
+
+.nav-text{
+    padding: 1.5rem 0 1.5rem 0;
+
+}
+#listtabs > li a.active{
+    border-bottom: 3px solid #44788C;
+    color: #44788C;
+}
+
+#list-main-tabs {
+
+    margin:10px 0 20px 0;
+
+    li{
+        margin-left: 0px !important;
+    }
+ li a {  
+    background-color: #eceae4!important;
+    color: #000;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;;
+    font-size: 16px;
+}
+li a.active {
+   background-color: #ebb843!important;
+    color: #fff; 
+    border-radius: 20px;
+        padding: 5px 20px 5px 20px;;
+            font-size: 16px;
+}
+} 
+
+.list-progress{
+    padding: 0 5px 0 5px;
+}
+

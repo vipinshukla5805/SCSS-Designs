@@ -1,0 +1,128 @@
+.wb-hero {
+    background-image: url(../images/banner.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    color: #fff;
+    height: 60vh;
+    margin-top: -69px;
+    min-height: 320px;
+    position: relative;
+    text-align: center;
+    h1 {
+        color: #f0ede4;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    @include media-breakpoint-up(md) {
+        height: 70vh;
+        margin-top: -90px;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.wb-hero-text {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wb-btn-hero-outline {
+    @include button-outline-variant(#fff);
+    &:focus,
+    &:hover {
+        color: #ebb331;
+    }
+}
+
+.wb-section-beige {
+    background-color: #f9f7f0;
+    padding: 3rem 0;
+    text-align: center;
+    .container {
+        max-width: 768px;
+    }
+}
+
+.wb-section-home-adv,
+.wb-section-beige {
+    h3 {
+        color: #362925;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 38px;
+    }
+    p {
+        color: #443e3d;
+        font-size: 18px;
+    }
+}
+
+.wb-section-home-adv {
+    border-bottom: 1px solid #f9f7f0;
+    padding: 4rem 0;
+    .row {
+        font-size: 0;
+        >div {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    img {
+        margin: 0 auto 2rem;
+        max-width: 90%;
+    }
+
+    @include media-breakpoint-up(sm) {
+        img {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.wb-section-buttons {
+    margin-top: 4rem;
+}
+
+.wb-btn-yellow {
+    @include button-variant(#fff, #ebb331, #ebb331);
+}
+
+.wb-btn-yellow-outline {
+    @include button-outline-variant(#ebb331);
+    &:focus,
+    &:hover {
+        color: #fff;
+    }
+}
+
+.wb-section-blog {
+    padding: 4rem 0;
+
+    h2 {
+        margin-bottom: 4rem;
+    }
+}
+
+.wb-blog-teaser-card {
+    border: none;
+    
+    .card-block {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .card-title {
+        color: #362925;
+        font-size: 24px;
+    }
+    .card-text {
+        color: #443e3d;
+        font-size: 18px;
+    }
+}

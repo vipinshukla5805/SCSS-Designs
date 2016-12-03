@@ -1,0 +1,111 @@
+@import "../../bower_components/bootstrap/scss/mixins"; //
+@import "../../bower_components/bootstrap/scss/variables/_variables";
+
+.wb-actions-course{
+.btn-lg {
+        border-width: 2px;
+        min-width: 130px;
+        padding: 1rem 2rem;
+    }
+    @include media-breakpoint-up(sm) {
+        margin-top: 10px;         
+    }    
+    @include media-breakpoint-up(sm) {
+        .btn-lg  {
+            min-width: 120px;
+        }
+    }
+    &:hover,
+    &:focus,
+    &:active{
+        background-color: transparent; 
+    }
+    >.quiz-btn-success{
+        background-color: #5CB85C!important;
+        color: white!important;
+    }
+    >.quiz-btn-danger{
+        background-color: #D9534F !important;
+        color: white!important;
+    }
+
+    >.btn-outline-quiz {
+        color: #437c90;
+        background-image: none;
+        background-color: transparent;
+        border-color: #437c90;
+    }
+
+    .btn-outline-quiz:hover,
+    .btn-outline-quiz:active,
+    .btn-outline-quiz:focus{
+        background-color: transparent;
+    }
+
+}
+
+#senetenceModalList{
+    .modal-body{
+        padding: 0px; 
+        .list-group-item{
+            a{
+                text-decoration: none;
+                color: #333;
+            }
+        }       
+    }
+    .modal-sm{
+        max-width: 400px;
+    }    
+    .modal-content{
+        border-radius: 0px;
+    }
+    .modal-dialog{
+        margin-top: 100px;
+    }
+    z-index: 1042;
+}
+
+#createNewSentenceList{
+    .modal-content{
+        border-radius: 0px;
+    }
+    .modal-dialog{
+        margin-top: 105px;
+    }
+}
+
+#createNewWordList{
+    .modal-content{
+        border-radius: 0px;
+    }
+    .modal-dialog{
+        margin-top: 105px;
+    }
+}
+
+#sentenceModalWordList{
+    .modal-body{
+        padding: 0px; 
+        .list-group-item{
+            a{
+                text-decoration: none;
+                color: #333;
+            }
+        }       
+    }
+    .modal-sm{
+        max-width: 400px;
+    }    
+    .modal-content{
+        border-radius: 0px;
+    }
+    .modal-dialog{
+        margin-top: 100px;
+    }
+    z-index: 1042;
+}
+
+.list-header{
+        margin: 35px 0 30px 0;
+}
